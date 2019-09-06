@@ -1,5 +1,5 @@
 <?php
 
-use ZFTInfo\Book\Http\Controllers\PHPInfoController;
+use ZFTInfo\Book\Http\Controllers\BookController;
 
 Route::get('book', BookController::class.'@index');
