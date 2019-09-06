@@ -1,20 +1,20 @@
 <?php
 
-namespace ZFTInfo\PHPInfo;
+namespace ZFTInfo\Book;
 
 use Encore\Admin\Extension;
 
-class PHPInfo extends Extension
+class Book extends Extension
 {
-    public $name = 'phpinfo';
+    public $name = 'book';
 
     public $views = __DIR__.'/../resources/views';
 
     public $assets = __DIR__.'/../resources/assets';
 
     public $menu = [
-        'title' => 'Phpinfo',
-        'path'  => 'phpinfo',
+        'title' => 'Book',
+        'path'  => 'book',
         'icon'  => 'fa-gears',
     ];
 }

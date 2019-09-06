@@ -1,42 +1,42 @@
 <?php
 
-namespace ZFTInfo\PHPInfo;
+namespace ZFTInfo\Book;
 
 use Illuminate\Support\ServiceProvider;
 
 use Encore\Admin\Admin;
 
-class PHPInfoServiceProvider extends ServiceProvider
+class BookServiceProvider extends ServiceProvider
 {
     /**
      * {@inheritdoc}
      */
-    public function boot(PHPInfo $extension)
+    public function boot(Book $extension)
     {
-        if (! PHPInfo::boot()) {
+        if (! Book::boot()) {
             return ;
         }
-
+        
         if ($views = $extension->views()) {
-            $this->loadViewsFrom($views, 'phpinfo');
+            $this->loadViewsFrom($views, 'book');
         }
-
+        
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
-                [$assets => public_path('vendor/zftinfo/phpinfo')],
-                'phpinfo'
+                [$assets => public_path('vendor/zftinfo/book')],
+                'book'
             );
         }
-
+        
         $this->app->booted(function () {
-            PHPInfo::routes(__DIR__.'/../routes/web.php');
+            Book::routes(__DIR__.'/../routes/web.php');
 
             Admin::css([
-                'vendor/zftinfo/phpinfo/phpinfo.css'
+                'vendor/zftinfo/book/book.css'
             ]);
 
             Admin::js([
-                'vendor/zftinfo/phpinfo/phpinfo.js'
+                'vendor/zftinfo/book/book.js'
             ]);
         });
     }

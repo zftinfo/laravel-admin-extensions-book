@@ -1,5 +1,5 @@
 <?php
 
-use ZFTInfo\PHPInfo\Http\Controllers\PHPInfoController;
+use ZFTInfo\Book\Http\Controllers\PHPInfoController;
 
-Route::get('phpinfo', PHPInfoController::class.'@index');
+Route::get('book', BookController::class.'@index');

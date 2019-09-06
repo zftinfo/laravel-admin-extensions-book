@@ -1,16 +1,16 @@
 <?php
 
-namespace ZFTInfo\PHPInfo\Http\Controllers;
+namespace ZFTInfo\Book\Http\Controllers;
 
 use Encore\Admin\Layout\Content;
 use Illuminate\Routing\Controller;
 
-use ZFTInfo\PHPInfo\PHPInfo;
+use ZFTInfo\Book\Book;
 use Illuminate\Support\Arr;
 
-class PHPInfoController extends Controller
+class BookController extends Controller
 {
-    public function index(Content $content, PHPInfo $info)
+    public function index(Content $content, Book $book)
     {
     	$infos = [
             ['name' => 'PHP version',       'value' => 'PHP/'.PHP_VERSION],
@@ -31,6 +31,6 @@ class PHPInfoController extends Controller
         return $content
             ->title('Title')
             ->description('Description')
-            ->body(view('phpinfo::index', compact('infos')));
+            ->body(view('book::index', compact('infos')));
     }
 }
