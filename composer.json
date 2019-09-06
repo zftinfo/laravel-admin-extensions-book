@@ -1,9 +1,9 @@
 {
-    "name": "zftinfo/phpinfo",
-    "description": "description...",
+    "name": "zftinfo/laravel-admin-extensions-book",
+    "description": "laravel admin extensions",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
-    "homepage": "https://github.com/zftinfo/phpinfo",
+    "homepage": "https://github.com/zftinfo/laravel-admin-extensions-book.git",
     "license": "MIT",
     "authors": [
         {
