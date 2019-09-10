@@ -17,10 +17,10 @@ class CreateBookAuthorTable extends Migration
             $table->increments('id')->comment('唯一标识');
 
             $table->unsignedInteger('book_id')->comment('图书ID');
-            $table->foreign('book_id')->references('id')->on('t_book');
+            $table->foreign('book_id')->references('id')->on(config('book.database.table_prefix') . 'book');
 
             $table->unsignedInteger('author_id')->comment('作者ID');
-            $table->foreign('author_id')->references('id')->on('t_author');
+            $table->foreign('author_id')->references('id')->on(config('book.database.table_prefix') . 'author');
 
             $table->timestamp('created_at')->nullable()->comment('创建时间');
             $table->timestamp('updated_at')->nullable()->comment('更新时间');
