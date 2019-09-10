@@ -12,6 +12,8 @@ class Book extends Extension
 
     public $assets = __DIR__.'/../resources/assets';
 
+    public $migrations = __DIR__ . '/../database/migrations';
+
     public $menu = [
         'title' => 'Book',
         'path'  => 'book',
