@@ -19,7 +19,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'book:install';
+    protected $signature = 'zftinfo-ext:book';
 
     /**
      * The console command description.

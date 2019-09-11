@@ -10,7 +10,6 @@ use ZFTInfo\Book\Models\Book;
 use ZFTInfo\Book\Models\Author;
 use ZFTInfo\Book\Models\Publisher;
 
-use App\Models\Product;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
